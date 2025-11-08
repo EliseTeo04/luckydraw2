@@ -1,0 +1,18 @@
+{
+  "cwd": "C:\\Users\\MSI\\Documents\\GitHub\\luckydraw",
+  "type": [
+    "web"
+  ],
+  "name": "luckydraw",
+  "framework": "react",
+  "template": "blank",
+  "cssPreProcessor": "scss",
+  "bundler": "vite",
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}
