@@ -10,22 +10,12 @@ import {
 } from 'framework7-react';
 
 const HomePage = () => (
-  <Page name="home">
-    {/* Top Navbar */}
-    <Navbar large>
-      <NavTitle>luckydraw</NavTitle>
-      <NavTitleLarge>luckydraw</NavTitleLarge>
-    </Navbar>
-    {/* Toolbar */}
-    <Toolbar bottom>
-      <Link>Left Link</Link>
-      <Link>Right Link</Link>
-    </Toolbar>
-    {/* Page content */}
-    <Block>
-      <p>Here is your blank Framework7 app. Let's see what we have here.</p>
-    </Block>
-
+  <Page name="home-page">
+    <div className="page-content">
+      <div className="animation-block">
+         <iframe src="/images/test.mp4" />
+      </div>
+    </div>
   </Page>
 );
 export default HomePage;
