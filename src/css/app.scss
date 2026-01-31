@@ -1,15 +1,62 @@
-.home-page {
-    .animation-block {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        
-        iframe {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    }
+html, body {
+   max-width: 425px;
+   margin: 0 auto;
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+
+/* When home page is visible: no overflow on body */
+body:has(.view-main .page.home-page) {
+    overflow: hidden !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+}
+
+/* When home page is shown: lock view to viewport, no scroll */
+.view-main:has(.page.home-page) {
+    overflow: hidden !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+}
+
+/* Home page: no Framework7 page-content, full viewport only */
+.page.home-page {
+    overflow: hidden !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Single fullscreen wrapper — fits 100% viewport, no overflow */
+.home-fullscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-fullscreen__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    cursor: pointer;
+}
+
+/* Zoom animation when video ends, then navigate */
+.home-fullscreen--zoom {
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+    transform: scale(1.2);
+    opacity: 0;
 }
